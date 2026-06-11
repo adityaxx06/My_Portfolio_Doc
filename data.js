@@ -1,0 +1,261 @@
+const DATA = {
+
+  hero: {
+    greeting: "Hello, World.",
+    name: "I'm Aditya Soni.",
+    role: "Frontend Developer & UI/UX Designer",
+    tagline: "HTML · CSS · JavaScript · React · Figma",
+    lines: [
+      "3+ years crafting clean, user-focused web experiences.",
+      "5 real-world projects. 1 competitive hackathon. Incoming MCA at SRMIST.",
+    ],
+    stats: [
+      { value: "5+",     label: "Projects Shipped" },
+      { value: "1",      label: "Hackathon Entered" },
+      { value: "3+",     label: "Years Building" },
+    ],
+    contact: [
+      { icon: "⌥", label: "GITHUB",   value: "@adityaxx06",          href: "https://github.com/adityaxx06" },
+      { icon: "in", label: "LINKEDIN", value: "adityaxx06",           href: "https://www.linkedin.com/in/adityaxx06/" },
+      { icon: "✉",  label: "EMAIL",    value: "adisonii2004@gmail.com", href: "mailto:adisonii2004@gmail.com" },
+      { icon: "📞", label: "PHONE",    value: "+91 95981 06365",       href: "tel:919598106365" },
+    ],
+  },
+
+  journey: {
+    chapter: "Chapter by Chapter",
+    title: "The Journey",
+    items: [
+      {
+        year: "2022",
+        period: "2022 – 2023",
+        role: "Self-Learning & Foundation",
+        type: "SELF-DIRECTED",
+        location: "Bilaspur, India",
+        points: [
+          "Started with HTML, CSS, and JavaScript — building small projects to develop core frontend fundamentals.",
+          "Explored UI/UX principles and Figma to understand design thinking from day one.",
+        ],
+      },
+      {
+        year: "2024",
+        period: "2024",
+        role: "UI/UX Designer",
+        type: "WORK",
+        location: "Creative Minds Studio · Remote",
+        points: [
+          "Designed user-centred layouts and wireframes for client products using Figma and Adobe XD.",
+          "Conducted user research to improve usability, conversion, and interaction quality.",
+        ],
+      },
+      {
+        year: "2025",
+        period: "2025",
+        role: "Frontend Developer Intern",
+        type: "INTERNSHIP",
+        location: "CodeAlpha · Remote",
+        points: [
+          "Built responsive UIs for real-world client projects using HTML, CSS, and JavaScript.",
+          "Collaborated with designers and developers to ship polished, production-ready interfaces.",
+        ],
+      },
+      {
+        year: "2025",
+        period: "Nov 2025",
+        role: "Hackathon Participant",
+        type: "ACHIEVEMENT",
+        location: "Shankaracharya University · Bhilai, C.G.",
+        points: [
+          "Competed in a university-level hackathon — built a working solution under time pressure.",
+          "Presented technical ideas to a panel of judges; gained rapid prototyping experience.",
+        ],
+      },
+      {
+        year: "2026",
+        period: "July 2026 →",
+        role: "Master of Computer Applications",
+        type: "UPCOMING",
+        location: "SRMIST · Chennai",
+        points: [
+          "Joining SRM Institute of Science & Technology for MCA — advancing into advanced CS and software engineering.",
+          "Actively practicing DSA (C++ / JS) to prepare for the transition.",
+        ],
+      },
+    ],
+  },
+
+  projects: {
+    chapter: "Built & Shipped",
+    title: "Projects",
+    items: [
+      {
+        num: "01",
+        name: "Balaji Metal Industries",
+        tagline: "Business Website · Freelance Client",
+        stack: ["HTML", "CSS", "JavaScript", "Vercel"],
+        desc: "A full professional business website for a metal manufacturing company. Built to establish a strong online presence with mobile-first design, fast load times, and a trust-building layout for B2B clients.",
+        longDesc: "Balaji Metal Industries needed a professional web presence to attract B2B clients and showcase their manufacturing capabilities. The site features a clean product/service overview, contact section, and responsive layout that works across all devices.\n\nThe design prioritises credibility — clear typography, structured content, and straightforward navigation. Deployed on Vercel with optimised assets for fast load times.",
+        highlights: [
+          { label: "Type",        value: "Freelance Client" },
+          { label: "Status",      value: "Live & Deployed" },
+          { label: "Platform",    value: "Vercel" },
+          { label: "Year",        value: "2024–25" },
+        ],
+        live: "https://www.balajimetal.com/",
+        repo: "https://adityaxx06.github.io/Business-Website--BMI-/",
+        status: "live",
+      },
+      {
+        num: "02",
+        name: "GSTify",
+        tagline: "GST Billing Platform · BCA Final Year Project",
+        stack: ["React", "Node.js", "Express", "MongoDB", "PDF Generation"],
+        desc: "A web-based GST billing platform that simplifies invoice generation, payment tracking, and reporting for small and medium Indian businesses.",
+        longDesc: "GSTify is my BCA final year project — a complete GST billing solution for small and medium Indian businesses. The platform handles GST-compliant invoice creation, client management, payment tracking, and downloadable PDF reports.\n\nBuilt with React on the frontend and Node.js/Express on the backend, with MongoDB for data persistence. Integrates GST rate calculation logic with a clean, minimal UI designed for non-technical users.",
+        highlights: [
+          { label: "Type",     value: "Final Year Project (BCA)" },
+          { label: "Status",   value: "Completed · Deploying Soon" },
+          { label: "Category", value: "FinTech / Business Tool" },
+          { label: "Year",     value: "2025" },
+        ],
+        live: null,
+        repo: null,
+        status: "soon",
+      },
+      {
+        num: "03",
+        name: "FinTrack",
+        tagline: "Expense Tracker · Personal Project",
+        stack: ["React", "JavaScript", "Chart.js", "CSS"],
+        desc: "A personal finance web app for tracking income, monitoring expenses, setting budgets, and visualising financial health through clean, minimal dashboards.",
+        longDesc: "FinTrack helps individuals take control of their personal finances through a clean, easy-to-use interface. Users can log income and expenses by category, set monthly budgets, and view visual summaries through Chart.js-powered graphs.\n\nDesigned with a strong focus on UX clarity — the goal was to make finance tracking feel simple and non-intimidating. Built with React and local state management.",
+        highlights: [
+          { label: "Type",     value: "Personal Project" },
+          { label: "Status",   value: "Built · GitHub Upload Soon" },
+          { label: "Category", value: "FinTech / Productivity" },
+          { label: "Year",     value: "2025" },
+        ],
+        live: null,
+        repo: null,
+        status: "soon",
+      },
+      {
+        num: "04",
+        name: "HK Grow Infra",
+        tagline: "Real Estate Website · In Development",
+        stack: ["HTML", "CSS", "JavaScript"],
+        desc: "A premium real estate website for a client — showcasing property listings, services, and agent contacts with a conversion-focused, high-end design.",
+        longDesc: "HK Grow Infra is a real estate website currently under active development for a client in the property sector. The site features property listing cards, company services, agent profiles, and an inquiry form.\n\nThe design prioritises trust and premium aesthetics — clean property cards, smooth hover effects, and a layout optimised for lead generation. Deploying very soon.",
+        highlights: [
+          { label: "Type",     value: "Freelance Client" },
+          { label: "Status",   value: "In Development" },
+          { label: "Category", value: "Real Estate" },
+          { label: "ETA",      value: "Deploying Soon" },
+        ],
+        live: null,
+        repo: null,
+        status: "wip",
+      },
+      {
+        num: "05",
+        name: "Personal Portfolio (v1)",
+        tagline: "Portfolio Website · Personal",
+        stack: ["HTML", "CSS", "JavaScript", "Netlify"],
+        desc: "My first personal portfolio — a responsive, animated showcase of my projects, skills, and contact info. Built with vanilla HTML/CSS/JS.",
+        longDesc: "My original portfolio website — a clean, animated single-page site that showcases my projects, skills, and contact details. Features smooth scroll animations, a video hero section, and a fully responsive layout.\n\nBuilt with pure vanilla HTML, CSS, and JavaScript — no frameworks. Deployed on Netlify.",
+        highlights: [
+          { label: "Type",     value: "Personal Project" },
+          { label: "Status",   value: "Live" },
+          { label: "Platform", value: "Netlify / GitHub Pages" },
+          { label: "Year",     value: "2024" },
+        ],
+        live: "https://portfolio-adityaxx06.netlify.app/",
+        repo: "https://github.com/adityaxx06/My-Portfolio",
+        status: "live",
+      },
+    ],
+  },
+
+  skills: {
+    chapter: "Tools of the Trade",
+    title: "Skills",
+    categories: [
+      { label: "Languages",   items: ["HTML5", "CSS3", "JavaScript", "C++"] },
+      { label: "Frameworks",  items: ["React", "Node.js", "Express"] },
+      { label: "Design",      items: ["Figma", "Adobe XD", "UI/UX Design", "Responsive Design", "Wireframing"] },
+      { label: "Databases",   items: ["MongoDB", "MySQL"] },
+      { label: "Tools",       items: ["Git", "GitHub", "Netlify", "Vercel", "VS Code"] },
+      { label: "CS / DSA",    items: ["Data Structures", "Algorithms", "C++", "Problem Solving"] },
+    ],
+  },
+
+  achievements: {
+    chapter: "Milestones",
+    title: "Achievements",
+    items: [
+      {
+        icon: "🏆",
+        title: "Hackathon Participant",
+        org: "Shankaracharya University · Bhilai, C.G.",
+        meta: "November 2025",
+        desc: "Competed in a university-level hackathon — built a working solution under time pressure and presented to a panel of judges. Gained hands-on experience with rapid prototyping and team collaboration.",
+        featured: true,
+      },
+      {
+        icon: "🎓",
+        title: "Google Student Ambassador",
+        org: "Google",
+        meta: "Oct 2025 - Jan 2026",
+        desc: "Selected as a Google Student Ambassador — represented Google at my university, organised tech events, and led workshops on web development and design.",
+        featured: true,
+      },
+      {
+        icon: "📜",
+        title: "Frontend Dev Certification",
+        org: "SimpliLearn",
+        meta: "2024",
+        desc: "Completed a professional-level Frontend Development certification covering modern web technologies, design principles, and deployment workflows.",
+        featured: false,
+      },
+      {
+        icon: "⚡",
+        title: "JavaScript Bootcamp",
+        org: "LetsUpgrade",
+        meta: "2024",
+        desc: "Completed an intensive JavaScript bootcamp covering ES6+, async programming, APIs, and real-world project application.",
+        featured: false,
+      },
+      {
+        icon: "💼",
+        title: "CodeAlpha Internship",
+        org: "CodeAlpha · Remote",
+        meta: "2025",
+        desc: "Completed a frontend developer internship — built responsive UIs for real client projects in a professional team environment.",
+        featured: false,
+      },
+    ],
+  },
+
+  resume: {
+    chapter: "Final Chapter",
+    title: "Resume",
+    subtitle: "A comprehensive view of my professional journey and achievements.",
+    versions: {
+      short:    "Aditya_ATS_Resume.pdf",
+      detailed: "Aditya_ATS_Resume.pdf",
+    },
+  },
+
+  contact: {
+    chapter: "Final Chapter",
+    title: "Let's Work\nTogether.",
+    blurb: "Open to freelance projects, internships, and collaborations. I usually reply within 48 hours.",
+    links: [
+      { icon: "✉",  label: "EMAIL",    value: "adisonii2004@gmail.com",        href: "mailto:adisonii2004@gmail.com" },
+      { icon: "📞", label: "PHONE",    value: "+91 95981 06365",                href: "tel:919598106365" },
+      { icon: "⌥",  label: "GITHUB",   value: "github.com/adityaxx06",         href: "https://github.com/adityaxx06" },
+      { icon: "in", label: "LINKEDIN", value: "linkedin.com/in/adityaxx06",    href: "https://www.linkedin.com/in/adityaxx06/" },
+    ],
+  },
+
+};

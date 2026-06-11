@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Aditya Soni — Frontend Developer & UI/UX Designer. Building clean, user-focused digital experiences."/>
+  <meta name="author" content="Aditya Soni"/>
+  <title>Aditya Soni - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Fixed blueprint background canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Custom cursor -->
+  <div id="cur"      aria-hidden="true"></div>
+  <div id="cur-ring" aria-hidden="true"></div>
+
+  <!-- Cinematic transition overlays -->
+  <div id="transition-bars" aria-hidden="true">
+    <div class="t-bar"></div>
+    <div class="t-bar"></div>
+    <div class="t-bar"></div>
+    <div class="t-bar"></div>
+    <div class="t-bar"></div>
+  </div>
+  <div id="transition-label" aria-hidden="true">
+    <div class="tl-num"></div>
+    <div class="tl-name"></div>
+  </div>
+
+  <!-- Progress bar -->
+  <div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+  <!-- ── TOPBAR ─────────────────────────────── -->
+  <header id="topbar">
+    <div class="tb-logo" onclick="goTo(0)" role="button" tabindex="0" aria-label="Go to home">
+      Aditya<span>.</span>
+    </div>
+    <nav class="tb-nav" id="tb-nav" aria-label="Page navigation"></nav>
+    <div class="tb-idx" id="tb-idx" aria-live="polite">01 / 07</div>
+  </header>
+
+  <!-- ── PREV / NEXT ────────────────────────── -->
+  <button class="page-nav pn-btn" id="btn-prev" aria-label="Previous page">PREV</button>
+  <button class="page-nav pn-btn" id="btn-next" aria-label="Next page">NEXT</button>
+
+  <!-- ══════════════════════════════════════════
+       SLIDING TRACK
+  ══════════════════════════════════════════ -->
+  <div id="track" role="main">
+
+    <!-- ── PAGE 1 · HERO ──────────────────── -->
+    <section class="page" id="p-hero" aria-label="Introduction">
+      <div class="pb">
+        <div class="hero-layout">
+
+          <!-- left column -->
+          <div>
+            <div class="hero-greeting" id="hero-greeting"></div>
+            <h1 class="hero-name"    id="hero-name"></h1>
+            <p  class="hero-role"    id="hero-role"></p>
+            <div class="hero-divider"></div>
+            <p  class="hero-stack"   id="hero-stack"></p>
+            <div class="hero-lines"  id="hero-lines"></div>
+            <div class="hero-stats"  id="hero-stats"></div>
+            <div class="hero-contact" id="hero-contact"></div>
+          </div>
+
+          <!-- right column — photo card -->
+          <!-- <div class="hero-photo-card">
+            <div class="hero-photo-placeholder">
+              <div class="hero-photo-initials">AS</div>
+              <div class="hero-photo-name">ADITYA SONI</div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE 2 · JOURNEY ───────────────── -->
+    <section class="page" id="p-journey" aria-label="Journey">
+      <div class="pb">
+        <div class="journey-layout">
+          <div class="journey-header">
+            <div class="ch-label" id="j-chapter"></div>
+            <h2 class="ch-title"  id="j-title"></h2>
+          </div>
+          <div class="journey-cards-wrap">
+            <div class="journey-cards" id="journey-cards"></div>
+          </div>
+          <div class="journey-controls">
+            <button class="jc-ctrl" id="j-prev" aria-label="Previous">&#8249;</button>
+            <button class="jc-ctrl" id="j-next" aria-label="Next">&#8250;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE 3 · PROJECTS ─────────────── -->
+    <section class="page" id="p-projects" aria-label="Projects">
+      <div class="pb">
+        <div class="projects-layout">
+          <div class="projects-header">
+            <div class="ch-label" id="proj-chapter"></div>
+            <h2 class="ch-title"  id="proj-title"></h2>
+          </div>
+          <div class="projects-scroll">
+            <div class="projects-grid" id="projects-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE 4 · SKILLS ───────────────── -->
+    <section class="page" id="p-skills" aria-label="Skills">
+      <div class="pb">
+        <div class="skills-layout">
+          <div>
+            <div class="ch-label" id="skills-chapter"></div>
+            <h2 class="ch-title"  id="skills-title"></h2>
+          </div>
+          <div class="skills-table" id="skills-table"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE 5 · ACHIEVEMENTS ─────────── -->
+    <section class="page" id="p-achievements" aria-label="Achievements">
+      <div class="pb">
+        <div class="ach-layout">
+          <div>
+            <div class="ch-label" id="ach-chapter"></div>
+            <h2 class="ch-title"  id="ach-title"></h2>
+          </div>
+          <div class="ach-scroll">
+            <div class="ach-grid" id="ach-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE 6 · RESUME ───────────────── -->
+    <section class="page" id="p-resume" aria-label="Resume">
+      <div class="pb">
+        <div class="resume-layout">
+
+          <div class="resume-header">
+            <div class="ch-label" id="res-chapter"></div>
+            <h2 class="ch-title"  id="res-title"></h2>
+          </div>
+
+          <div class="resume-ver-row">
+            <span class="res-ver-label">Select Resume Version:</span>
+            <button class="res-ver-btn" data-ver="short"
+              onclick="setResumeVersion('short')">SHORT</button>
+            <button class="res-ver-btn active" data-ver="detailed"
+              onclick="setResumeVersion('detailed')">DETAILED</button>
+          </div>
+
+          <p class="resume-subtitle" id="res-subtitle"></p>
+
+          <div class="resume-frame-wrap">
+            <iframe
+              id="resume-iframe"
+              title="Aditya Soni Resume"
+              aria-label="Resume document viewer">
+            </iframe>
+          </div>
+
+          <div class="resume-actions">
+            <a id="res-open-btn" class="res-open-btn"
+               href="Aditya_ATS_Resume.pdf"
+               target="_blank" rel="noopener">
+              OPEN FULL DETAILED RESUME
+            </a>
+            <a id="res-dl-btn" class="res-dl-btn"
+               href="Aditya_ATS_Resume.pdf"
+               download="Aditya_Soni_Resume.pdf">
+              Download PDF
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="p-contact" aria-label="Contact">
+      <div class="pb">
+        <div class="contact-outer">
+          <div class="ct-scroll">
+            <div class="contact-layout">
+
+              <div>
+                <div class="ch-label" id="ct-chapter"></div>
+                <div class="contact-big" id="ct-big"></div>
+                <p class="contact-blurb" id="ct-blurb"></p>
+                <div class="contact-links" id="ct-links"></div>
+              </div>
+
+              <div>
+                <form class="ct-form" onsubmit="return false;">
+                  <div class="form-row">
+                    <div class="fg">
+                      <label class="fl" for="f-name">Name</label>
+                      <input type="text"  class="fi" id="f-name"  placeholder="Your name" autocomplete="name"/>
+                    </div>
+                    <div class="fg">
+                      <label class="fl" for="f-email">Email</label>
+                      <input type="email" class="fi" id="f-email" placeholder="your@email.com" autocomplete="email"/>
+                    </div>
+                  </div>
+                  <div class="fg">
+                    <label class="fl" for="f-subject">Subject</label>
+                    <input type="text" class="fi" id="f-subject" placeholder="What's this about?"/>
+                  </div>
+                  <div class="fg">
+                    <label class="fl" for="f-msg">Message</label>
+                    <textarea class="fta" id="f-msg" placeholder="Tell me about your project..."></textarea>
+                  </div>
+                  <button type="submit" class="f-submit"><span>Send Message →</span></button>
+                </form>
+
+                <div class="ct-footer">
+                  <div class="ctf-copy">© 2026 <span>Aditya Soni</span> · Built with care.</div>
+                  <div class="ctf-socials">
+                    <a href="https://github.com/adityaxx06"              target="_blank" rel="noopener" class="cs-btn" aria-label="GitHub">GH</a>
+                    <a href="https://www.linkedin.com/in/adityaxx06/"   target="_blank" rel="noopener" class="cs-btn" aria-label="LinkedIn">Li</a>
+                    <a href="mailto:adisonii2004@gmail.com"                              class="cs-btn" aria-label="Email">@</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- /ct-scroll -->
+        </div><!-- /contact-outer -->
+      </div>
+    </section>
+
+  </div><!-- /track -->
+
+  <!-- ── PROJECT MODAL ──────────────────────── -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <div class="modal-box" id="modal-box">
+      <div class="modal-topbar">
+        <span class="modal-num" id="m-num"></span>
+        <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-title"   id="m-title"></div>
+        <div class="modal-tagline" id="m-tagline"></div>
+        <div class="modal-status"  id="m-status"></div>
+
+        <div class="modal-slabel">About the Project</div>
+        <div class="modal-desc" id="m-desc"></div>
+
+        <div class="modal-slabel">Tech Stack</div>
+        <div class="modal-tags" id="m-tags"></div>
+
+        <div class="modal-slabel">Project Highlights</div>
+        <div class="modal-highlights" id="m-highlights"></div>
+
+        <div class="modal-slabel">Links</div>
+        <div class="modal-links" id="m-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SCRIPTS ────────────────────────────── -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('TokibhyjABEG0ez2X');</script>
+
+  <!-- Toast notification -->
+  <div id="toast" aria-live="polite" aria-atomic="true">
+    <div class="toast-icon" id="toast-icon"></div>
+    <div class="toast-body">
+      <div class="toast-title" id="toast-title"></div>
+      <div class="toast-msg"   id="toast-msg"></div>
+    </div>
+  </div>
+
+  <script src="bg.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
