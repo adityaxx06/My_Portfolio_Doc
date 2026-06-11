@@ -3,8 +3,8 @@ const DATA = {
   hero: {
     greeting: "Hello, World.",
     name: "I'm Aditya Soni.",
-    role: "Frontend Developer & UI/UX Designer",
-    tagline: "HTML · CSS · JavaScript · React · Figma",
+    role: "Full Stack Engineer & AI Developer.",
+    tagline: "Frontend · Backend · AI · UI/UX · Problem Solving",
     lines: [
       "3+ years crafting clean, user-focused web experiences.",
       "5 real-world projects. 1 competitive hackathon. Incoming MCA at SRMIST.",
@@ -33,8 +33,10 @@ const DATA = {
         type: "SELF-DIRECTED",
         location: "Bilaspur, India",
         points: [
-          "Started with HTML, CSS, and JavaScript — building small projects to develop core frontend fundamentals.",
-          "Explored UI/UX principles and Figma to understand design thinking from day one.",
+          "Started learning HTML, CSS, and JavaScript through self-study and online resources.",
+          "Built small practice projects to strengthen frontend development fundamentals.",
+          "Explored UI/UX design principles and Figma to understand user-centered design.",
+          "Developed problem-solving and debugging skills through consistent hands-on practice."
         ],
       },
       {
@@ -44,8 +46,10 @@ const DATA = {
         type: "WORK",
         location: "Creative Minds Studio · Remote",
         points: [
-          "Designed user-centred layouts and wireframes for client products using Figma and Adobe XD.",
-          "Conducted user research to improve usability, conversion, and interaction quality.",
+          "Created interactive prototypes in Figma to visualize user flows and improve product experiences.",
+          "Designed user-centered interfaces and wireframes focused on usability, accessibility, and visual consistency.",
+          "Collaborated with developers to ensure accurate implementation of designs and a seamless user experience.",
+          "Applied design thinking principles to solve user problems and enhance engagement across digital platforms."
         ],
       },
       {
@@ -55,8 +59,10 @@ const DATA = {
         type: "INTERNSHIP",
         location: "CodeAlpha · Remote",
         points: [
-          "Built responsive UIs for real-world client projects using HTML, CSS, and JavaScript.",
-          "Collaborated with designers and developers to ship polished, production-ready interfaces.",
+          "Implemented modern frontend practices to create clean, interactive, and visually appealing web applications.",
+          "Built responsive web interfaces using HTML, CSS, and JavaScript, ensuring seamless user experiences across devices.",
+          "Collaborated with designers and developers to transform ideas into polished, production-ready interfaces.",
+          "Worked on real-world development tasks, improving code quality, debugging efficiency, and project delivery skills."
         ],
       },
       {
@@ -66,8 +72,10 @@ const DATA = {
         type: "ACHIEVEMENT",
         location: "Shankaracharya University · Bhilai, C.G.",
         points: [
-          "Competed in a university-level hackathon — built a working solution under time pressure.",
-          "Presented technical ideas to a panel of judges; gained rapid prototyping experience.",
+          "Applied problem-solving and critical-thinking skills to transform ideas into a functional prototype.",
+          "Participated in a competitive hackathon, collaborating with teammates to develop an innovative solution within a limited timeframe.",
+          "Gained valuable experience in teamwork, rapid development, and working effectively under pressure.",
+          "Presented project concepts, technical approaches, and outcomes to judges and fellow participants."
         ],
       },
       {
