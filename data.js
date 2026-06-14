@@ -122,13 +122,13 @@ const DATA = {
         longDesc: "GSTify is my BCA final year project — a complete GST billing solution for small and medium Indian businesses. The platform handles GST-compliant invoice creation, client management, payment tracking, and downloadable PDF reports.\n\nBuilt with React on the frontend and Node.js/Express on the backend, with MongoDB for data persistence. Integrates GST rate calculation logic with a clean, minimal UI designed for non-technical users.",
         highlights: [
           { label: "Type",     value: "Final Year Project (BCA)" },
-          { label: "Status",   value: "Completed · Deploying Soon" },
+          { label: "Status",   value: "Completed · Deployed" },
           { label: "Category", value: "FinTech / Business Tool" },
           { label: "Year",     value: "2025" },
         ],
-        live: null,
-        repo: null,
-        status: "soon",
+        live: "https://gstify-8hf8.onrender.com/",
+        repo: "https://github.com/adityaxx06/GSTify",
+        status: "live",
       },
       {
         num: "03",
