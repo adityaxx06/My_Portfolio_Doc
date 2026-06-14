@@ -249,8 +249,8 @@ const DATA = {
     title: "Resume",
     subtitle: "A comprehensive view of my professional journey and achievements.",
     versions: {
-      short:    "Aditya_ATS_Resume.pdf",
-      detailed: "Aditya_ATS_Resume.pdf",
+      short:    "AdityaATSResume.pdf",
+      detailed: "AdityaATSResume.pdf",
     },
   },
 
